@@ -84,6 +84,8 @@ timeline |> gt() |>
 
 The Stan team has made a huge imprint on my work and how I see the world, and I'd love to contribute to the project in any way that I can. I consider GSOC an opportunity to learn a ton and help get Stan to more people. I'm motivated by the prospect of making the Baysian workflow accessible to anyone who's interested in applying it, and think bayesplot is a really key component of both learning and maintaining a principled way of doing Bayesian inference in the real world.
 
+I also think working on a GSOC project with the Stan team represents an invaluable educational experience. I'm excited to learn new ways to solve difficult problems and expand my capabilities as a data scientist and software engineer.
+
 ## General Competencies
 
 ### R
@@ -120,4 +122,4 @@ I'm not applying for any other GSOC projects.
 
 # After GSOC
 
-I hope to continue contributing to the broader Stan project as I figure out the next steps in my professional or academic life. Continuing to improve the
+I hope to continue contributing to the broader Stan project as I figure out the next steps in my professional or academic life.
