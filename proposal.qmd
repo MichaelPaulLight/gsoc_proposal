@@ -30,17 +30,35 @@ Currently **bayesplot** offers a variety of plots of posterior draws, visual MCM
 
 The goal of this project will be to implement the ensemble of visual predictive checks proposed by [Säilynoja](https://teemusailynoja.github.io/visual-predictive-checks/) et al. in bayesplot, with a particular focus on adding visualizations for predictive checks of discrete and categorical outcomes.
 
-Visualizations to be added include:
+## Visualizations to be added include:
 
--   Overlaid KDE Plots
+### PIT-ECDF Diagnostics of Overlaid KDE Plots
 
--   Discrete Rootograms
+This project will add functionality to bayesplot that helps users identify instances where the common approach of using overlaid KDE plots to assess models fit to count data by pairing overlaid KDE plots with visualizations of their PIT-ECDF values. Below, PIT-ECDF diagnostics are plotted for a better- and worse-fitting model.
 
--   PAV-Adjusted Calibration Plots
+![PIT-ECDF plot shows a better fit to data.](figures/plot_pit-ecdf.png)![PIT-ECDF plot shows a worse fit to data.](figures/plot_pit-ecdf_2.png)
 
--   PAV-Adjusted Residual Plots
+### Discrete Rootograms
 
-Other project outcomes include documentation updates.
+Traditionally, in a rootogram the frequencies of the observed counts are visualized with a bar plot, and predictive expected frequencies as a connected line plot Figure 1 (a). This project will develop a bayesplot function to generate a modified, Discrete Rootogram shown in Figure 1 (b), which emphasizes the discreteness of the predictions by showing the predictive frequencies as points and point-wise credible intervals, instead of connecting these into lines and filled areas. For overlaying, we prefer to show the observations as points and use color to highlight the observations falling outside the credible intervals.
+
+![](figures/plot_discrete-rootogram_4.png){fig-align="center"}
+
+### PAV-Adjusted Calibration Plots
+
+To address issues of users drawing erroneous conclusions from binned calibration plots, this project will develop functions to create PAV-adjusted calibration plots to visualize binary data. These plots combine conditional event probability visualizations with consistency bands corresponding to posterior predictive draws, which viewed together will help users distinguish well- from poor-fitting binary predictive models.
+
+![Comparison of two models using PAV-adjusted calibration plots. In the PAV-adjusted calibration plot of the zero-inflated negative binomial model, we see the calibration curve staying within the consistency bands, and also observe a wider range of predicted event probabilities. Together these two qualities indicate the zero-inflated model to be better calibrated.](figures/plot_pav-calibration_2.png)
+
+### PAV-Adjusted Residual Plots
+
+While binned and PAV-adjusted calibration plots are useful for assessing the overall predictive calibration of a model, the behavior conditional on individual predictors is often of interest to practitioners. This project will create bayesplot functions that help users assess the deviations between observations and predictions of models by displaying their residuals as PAV-adjusted residual plots.
+
+![The PAV-adjusted residual plot that corresponds to the negative binomial PAV-adjusted calibration plot in section 2.1.3.](figures/plot_pav-marginal_3.png)
+
+### Other project outcomes
+
+This project will develop documentation for each new new plot, helping users not only understand their functional behavior and use but also interpret their outputs. In addition, one case study will be created to demonstrate each plot's utility in a real world application of the Bayesian worklow.
 
 # Previous Contributions to Stan
 
