@@ -15,6 +15,9 @@ editor: visual
 # About
 
 In May, I'll finish a Master of Applied Data Science at the University of Michigan; the curriculum has been Python-centric and essentially acted as a crash course in vanilla machine learning, but provided some foundations in causal inference, uncertainty, and math that have carried over to my personal study of Bayesian stats. I'm motivated by the prospect of making the Baysian workflow accessible to anyone who's interested in applying it, and think bayesplot is a really key component of both learning and maintaining a principled way of doing Bayesian inference in the real world.
+In May, I'll finish a Master's in Applied Data Science at the University of Michigan; the curriculum has been Python-centric and essentially acted as a crash course in vanilla machine learning, but provided some foundations in causal inference, uncertainty, and math that have carried over to my personal study of Bayesian stats. I'm motivated by the prospect of making the Baysian workflow accessible to anyone who's interested in applying it, and think bayesplot is a really key component of both learning and maintaining a principled way of doing Bayesian inference in the real world.
+
+In graduate school, I've geared all my project work toward Bayesian methods. I've completed two large projects using a Bayesian approach to modeling (resulting reports [here](https://github.com/MichaelPaulLight/milestone_2/blob/main/reporting/report.pdf) and [here](https://github.com/MichaelPaulLight/milestone_2/blob/main/reporting/report.pdf)), and am currently completing [a third](https://github.com/MichaelPaulLight/nba_l2m) as part of an independent study with [Kevyn Collins-Thompson](https://www.si.umich.edu/people/kevyn-collins-thompson), who directs the Applied Data Science program.
 
 -   [Github](https://github.com/MichaelPaulLight)
 
@@ -34,7 +37,7 @@ The goal of this project will be to implement the ensemble of visual predictive 
 
 ### PIT-ECDF Diagnostics of Overlaid KDE Plots
 
-This project will add functionality to bayesplot that helps users identify instances where the common approach of using overlaid KDE plots to assess models fit to count data by pairing overlaid KDE plots with visualizations of their PIT-ECDF values. Below, PIT-ECDF diagnostics are plotted for a better- and worse-fitting model.
+This project will add functionality to bayesplot that helps users identify instances where the common approach of using overlaid KDE plots to assess models fit to count data by pairing overlaid KDE plots with visualizations of their PIT-ECDF values. Below, PIT-ECDF diagnostics are plotted for a better- and worse-fitting model. In addition to creating a function that can be added to an existing visualization using ggplot2 syntax, this project will augment bayesplots' existing overlaid kde functions such that users will be automatically warned if PIT-ECDF diagnostics indicate over-smoothing.
 
 ![PIT-ECDF plot shows a better fit to data.](figures/plot_pit-ecdf.png)![PIT-ECDF plot shows a worse fit to data.](figures/plot_pit-ecdf_2.png)
 
@@ -116,7 +119,7 @@ I also think working on a GSOC project with the Stan team represents an invaluab
 
 -   I started learning Stan syntax within the past year. I read Stan models every day, and can write simple models. Most of my exposure to Stan is via brms; the more complex models I’ve built have been with brms.
 
--   I have a solid understanding of the theory behind prior, retrodictive, and predictive checks in the Bayesian workflow, and experience using bayesplot, tidybayes, ggdist, marginaleffects, and vmc to analyze/visualize models.
+-   I have a solid understanding of the theory behind prior, retrodictive, and predictive checks in the Bayesian workflow, and experience using bayesplot, tidybayes, ggdist, marginaleffects, and vmc to analyze/visualize models. I've taken multiple courses on uncertainty visualization and am able to create bespoke, domain-specific visualizations that help more- and less-technical audiences understand Bayesian models and their implications.
 
 -   I’ve recently incorporated sbc into my workflow and have read the papers by Talts, Mondrak, and Bürkner. I get the theoretical need for sbc, can run sbc and begin to interpret its outputs, and am actively developing my understanding of the associated math.
 
@@ -132,7 +135,7 @@ I also think working on a GSOC project with the Stan team represents an invaluab
 
 # Availability
 
-I'm available through the entire GSOC period, and plan on working on this project at least 20 hours each week. I'll be happy to work with the Stan team to adjust the total working hours as needed.
+I'm available through the entire GSOC period, and plan on working on this project at least 20 hours each week, with a maximum availability of 40 hours per week. I'll be happy to work with the Stan team to adjust the total working hours as needed.
 
 # Other GSOC Applications
 
@@ -140,4 +143,6 @@ I'm not applying for any other GSOC projects.
 
 # After GSOC
 
-I hope to continue contributing to the broader Stan project as I figure out the next steps in my professional or academic life.
+I hope to continue contributing to the broader Stan project as I figure out the next steps in my professional or academic life. I intend on continuing to use Stan in all my data science work going forward, and acting as a kind of Bayesian ambassador who helps folks in academia and industry understand the utility and broad applicability of the Bayesian workflow.
+
+I'd also like to expand the existing suite of Bayesian tools to better incorporate causal modeling methods (e.g. directed acyclic graphs) and their outputs in such a way that improves the user experience of building downstream generative and probabilistic models. Creating tools in the spirit of the tidymodels framework (as one example) that more clearly connect causal, generative, statistical, and computational models (as well as their visual outputs) represents a major opportunity to expand the Stan community by lowering the Bayesian barrier to entry for subject-matter experts who lack more advanced formal training in statistics.
